@@ -1,87 +1,147 @@
 /* Estilos para la página de perfil profesional */
 
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f9f9f9;
+    background: linear-gradient(135deg, #f9f9f9 0%, #e0e0e0 100%);
     color: #333;
     line-height: 1.6;
 }
 
 header {
-    background-color: #800000; /* Granate */
+    background: linear-gradient(135deg, #800000 0%, #a00000 100%);
     color: white;
     text-align: center;
-    padding: 2rem 1rem;
+    padding: 3rem 1rem;
+    position: relative;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.profile-pic {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 4px solid white;
+    margin-bottom: 1rem;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    transition: transform 0.3s ease;
+}
+
+.profile-pic:hover {
+    transform: scale(1.05);
 }
 
 header h1 {
     margin: 0;
-    font-size: 2.5rem;
+    font-size: 2.8rem;
+    font-weight: 300;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
 }
 
 header p {
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     margin: 0.5rem 0 0 0;
+    font-weight: 200;
 }
 
 section {
-    max-width: 800px;
+    max-width: 900px;
     margin: 2rem auto;
-    padding: 1rem;
+    padding: 2rem;
     background-color: white;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+section:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
 }
 
 h2 {
-    color: #800000; /* Granate */
-    border-bottom: 2px solid #B22222; /* Rojo suave */
+    color: #800000;
+    border-bottom: 3px solid #B22222;
     padding-bottom: 0.5rem;
+    font-size: 1.8rem;
+    font-weight: 400;
 }
 
 .item {
     margin-bottom: 1.5rem;
+    padding: 1rem;
+    background: linear-gradient(135deg, #fff5f5 0%, #ffeaea 100%);
+    border-radius: 8px;
+    border-left: 5px solid #800000;
 }
 
 .item h3 {
-    color: #B22222; /* Rojo suave */
+    color: #B22222;
     margin-bottom: 0.5rem;
+    font-size: 1.4rem;
 }
 
 .item p {
     margin: 0.5rem 0;
+    color: #555;
 }
 
 ul {
     list-style-type: none;
     padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
 }
 
 ul li {
-    background-color: #ffeaea; /* Fondo muy suave rojo */
-    margin: 0.5rem 0;
-    padding: 0.5rem;
+    background: linear-gradient(135deg, #ffeaea 0%, #ffdada 100%);
+    margin: 0;
+    padding: 1rem;
+    border-radius: 8px;
     border-left: 4px solid #800000;
+    flex: 1 1 calc(50% - 1rem);
+    box-sizing: border-box;
+    transition: background 0.3s ease;
+}
+
+ul li:hover {
+    background: linear-gradient(135deg, #ffdada 0%, #ffcccc 100%);
 }
 
 footer {
     text-align: center;
-    padding: 1rem;
-    background-color: #800000;
+    padding: 1.5rem;
+    background: linear-gradient(135deg, #800000 0%, #a00000 100%);
     color: white;
     position: fixed;
     width: 100%;
     bottom: 0;
+    box-shadow: 0 -4px 8px rgba(0,0,0,0.2);
+}
+
+footer p {
+    margin: 0;
+    font-weight: 200;
 }
 
 @media (max-width: 600px) {
     header h1 {
-        font-size: 2rem;
+        font-size: 2.2rem;
+    }
+    header p {
+        font-size: 1.1rem;
+    }
+    .profile-pic {
+        width: 100px;
+        height: 100px;
     }
     section {
         margin: 1rem;
-        padding: 0.5rem;
+        padding: 1rem;
+    }
+    ul li {
+        flex: 1 1 100%;
     }
 }
